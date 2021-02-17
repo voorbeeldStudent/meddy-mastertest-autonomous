@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --grey-000: #ffffff;
+    --grey-100: #F7FAFC;
+    --grey-200: #EDF2F7;
+    --grey-300: #E2E8F0;
+    --grey-400: #CBD5E0;
+    --grey-500: #A0AEC0;
+    --grey-600: #718096;
+    --grey-700: #4A5568;
+    --grey-800: #2D3748;
+    --grey-900: #1A202C;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    padding:0;
+    color: var(--grey-900);
+    font-family: 'Inter', sans-serif;
+}
+
+nav h1{
+    text-align:center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.search-form {
+    flex-direction: row;
+}
+
+form.search-form {
+    margin: auto;
+    width: 50%;
+}
+
+
+input[type="file"] {
+    background: var(--grey-200);
+    border-radius: 4px;
+    padding: 1em;
+    width: 100%;
+}
+
+button {
+    color: var(--grey-000);
+    border-radius: 4px;
+    display: block;
+    border: none;
+    background-color: var(--grey-500);
+    padding: .625em 2em;
+    margin-top: 1em;
+}
+
+/* results page medicine */
+
+ul {
+    list-style-type: none;
+    position: relative;
+    display: block;
+    margin:0;
+    padding:0;
+}
+li {
+    font-weight: 100;
+    position: relative;
+}
+li span {
+    font-weight: 900;
+}
+@media screen and (min-width: 48em) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        width: 40%;
+    }
+
+    .search-form {
+        align-items: center;
+        width: 50%;
+    }
+
+    .search-form input {
+        border: 1px solid var(--grey-400);
+        border-radius: 4px;
+        padding: .5em;
+        flex: 3;
+        height: 100%;
+        margin-right: 1em;
+    }
+
+    .search-form button {
+        flex: 1;
+        margin: 0;
+    }
+    
+    section {
+        width: 50%;
+    }
+}
+
+
+
+/* loading animation */
+
+div.loading-state {
+    padding:1em;
+    text-align: center;
+}
+div.loading-state {
+    position: fixed;
+    z-index: 99;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:var(--grey-100)
+    
+}
+div.loading-state div div.scan-line{
+    width:10em;
+    background: var(--grey-600);
+    height:.15em;
+    margin: auto;
+    animation:scan-line-animation 2s ease-in-out infinite;
+}
+div.loading-state div span{
+    color:var(--grey-500);
+    font-size: 2em;
+    font-weight: 900
+}
+.loading-state.hidden{
+    animation:fadeOut 1s;
+    animation-fill-mode:forwards;
+}
+.loading-state.show{
+    animation:fadeOut 1s reverse;
+    animation-fill-mode:forwards;
+}
+@keyframes scan-line-animation{
+    0%{
+        display: block;
+        position: relative;
+        top: 0em;
+    }
+    50%{
+        display: block;
+        position: relative;
+        top: -2em;
+    }
+    100%{
+        display: block;
+        position: relative;
+        top: 0em;
+    }
+}
+
+@keyframes fadeOut{
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}

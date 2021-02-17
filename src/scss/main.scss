@@ -1,0 +1,22 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--grey-200);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+// colors
+@import "variables";
+
+// partials
+@import "partials/base";
+
+// pages
+@import "pages/base";

@@ -1,0 +1,257 @@
+main.upload-main {
+    margin: auto;
+    width: 100%;
+    display: block;
+    position: relative;
+    top: 3em;
+
+    button.upload {
+        padding: 0.8em;
+        border: none;
+        font-size: 1em;
+        position: relative;
+        display: block;
+        margin: 0 auto 1em;
+        width: 90%;
+        background: var(--grey-400);
+        color: #6e7d8c;
+        transition: 300ms ease-in-out;
+
+        &:hover {
+            cursor: not-allowed;
+            // box-shadow: 4px 16px 19px -11px rgba(240,70,110,0.51);
+        }
+    }
+}
+
+.scanBtn-active {
+    background: var(--berry-500) !important;
+    color: white !important;
+    border-radius: .4em !important;
+
+    &:hover {
+        cursor: pointer !important;
+        box-shadow: 4px 16px 19px -11px rgba(242, 116, 147, .4);
+        ;
+    }
+
+}
+
+.upload-image {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    justify-content: center;
+    background: var(--grey-300);
+    margin: 1em;
+    border: .09em dashed var(--grey-500);
+    position: relative;
+
+    div.img-container {
+        display: inline-block;
+        width: 100%;
+        height: 14em;
+        margin-bottom: 5em;
+    }
+
+    img {
+        display: inline-block;
+        width: 100%;
+        object-fit: contain;
+        height: 100%;
+    }
+
+    div {
+        text-align: center;
+    }
+
+    p {
+        font-size: 0.7em;
+        color: var(--grey-600);
+        width: 14em;
+        margin: 1em auto;
+    }
+}
+
+.container {
+    position: relative;
+}
+
+.upload-introimg {
+    display: none;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+label {
+    width: 70%;
+    padding: 0.7em;
+    // background: var(--teal-gradient);
+    border: none;
+    margin-top: 1em;
+    font-size: 0.9em;
+    border-radius: 0.2em;
+    display: block;
+    text-align: center;
+    color: #5aaaf0;
+    margin: auto;
+    opacity: 1;
+
+    &::after {
+        content: "";
+        width: 2.4em;
+        height: 0.2em;
+        background: var(--grey-500);
+        display: inline-block;
+        position: absolute;
+        border-radius: 2em;
+        bottom: 1.2em;
+        opacity: 0;
+        transform: translateX(1em);
+        transition: 600ms cubic-bezier(.62, .11, .21, 1.02);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover:after {
+
+        opacity: 1;
+        width: 1.7em;
+        transform: translateX(-6em);
+    }
+
+}
+
+.imageplaceholder {
+    color: var(--grey-700);
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    span {
+        font-weight: 800;
+    }
+
+    h3 {
+        color: var(--grey-900);
+    }
+
+    article {
+        text-align: center;
+        width: 14em;
+        margin: auto;
+    }
+}
+
+.upload-container {
+    width: 30em;
+    height: 30em;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 1em auto;
+}
+
+.place-holder {
+    position: relative;
+    display: block;
+
+    &.container {
+        height: 27em;
+        background: var(--grey-100);
+        position: relative;
+        display: block;
+        border-radius: 1em;
+    }
+}
+
+
+
+form {
+    width: 15em;
+}
+
+@media (min-width: 768px) {
+    nav {
+        background: var(--grey-100);
+        height: 3em;
+
+        .top-nav {
+            background: var(--grey-100);
+            display: none;
+        }
+
+        a {
+            &::after {
+                content: "Meddy.";
+                color: var(--teal-700);
+                position: relative;
+                transition: 400ms ease-in-out;
+                left: 2em;
+            }
+            &:hover:after{
+                left:1em;
+            }
+        }
+    }
+
+    main.upload-main {
+        display: flex;
+        justify-content: space-around;
+        height: 100vh;
+
+        .upload-image div.img-container {
+            display: inline-block;
+            width: 100%;
+            height: 8em;
+            margin-bottom: 5em;
+        }
+
+
+        div.upload-post {
+
+            header {
+                width: 28em;
+            }
+        }
+    }
+
+    main.upload-main div.upload-post {
+
+        .container {
+            width: 30em;
+        }
+    }
+
+    .upload-introimg {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+        &::after {
+            content: "";
+            height: 100%;
+            width: 50vw;
+            position: absolute;
+            background: var(--grey-300);
+            z-index: -1;
+            top: 0;
+        }
+
+        img {
+            width: 30em;
+        }
+    }
+
+}

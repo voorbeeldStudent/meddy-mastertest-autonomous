@@ -1,0 +1,175 @@
+main.scan {
+	position: relative;
+	top: 2em;
+
+	.upload-image {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		background: var(--grey-300);
+		position: relative;
+		margin: 0;
+		border: none;
+
+		img {
+			object-fit: cover;
+			height: 100%;
+		}
+
+		.popup-results {
+			top: 6em;
+			position: relative;
+			height: 13em;
+		}
+
+	}
+
+	.popup-results {
+		position: relative;
+	}
+
+	.upload-scan {
+		width: 100%;
+		border-radius: 1em;
+		position: absolute;
+		color: #141414;
+		margin: auto;
+		padding: 0;
+		top: -8em;
+		height: 7em;
+		overflow: auto;
+		background: var(--grey-400);
+		transition: 300ms ease-in-out;
+
+		&:hover,
+		&:active {
+			cursor: pointer;
+			top: -13.4em;
+			height: 10em;
+			box-shadow: 0px 0px 17px -4px rgba(0, 0, 0, 0.35);
+		}
+
+		span {
+			display: block;
+			font-size: 1.2em;
+			font-weight: 800;
+		}
+
+		p {
+			font-family: Tahoma;
+			font-size: 0.7em;
+			font-family: Tahoma;
+			padding: 1em;
+			color: var(--grey-600);
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: var(--grey-100);
+		background: var(--berry-500);
+		padding: 0.5em;
+		position: relative;
+		top: -2em;
+		width: 80%;
+		display: block;
+		text-align: center;
+		margin: auto;
+		border-radius: 0.4em;
+	}
+}
+
+.results-scan {
+	// text-align: left;
+	// padding: 1em;
+	// border-radius: 0.3em;
+
+	article {
+		background: var(--grey-000);
+		box-shadow: 1px 4px 4px 0px var(--grey-400);
+		font-size: 0.9em;
+		padding: 1em;
+	}
+
+	h3 {
+		padding: 0;
+		font-size: 1em;
+	}
+
+	span {
+		color: var(--grey-600);
+		font-size: 0.8em;
+	}
+}
+
+
+.results-scan {
+	text-align: left;
+	border-radius: 0.3em;
+	top: -2em;
+	position: relative;
+}
+
+
+@media (min-width: 768px) {
+	main.scan {
+		position: unset;
+
+		a {
+			margin: 2em;
+			width: 20em;
+		}
+
+		.container {
+			width: 50vw;
+			padding: 2em;
+		}
+
+		.upload-image {
+			div {
+				height: 20em;
+			}
+
+		}
+
+		.popup-results {
+			width: 50vw;
+			position: absolute;
+			right: 0;
+			padding: 5em;
+			// background: var(--grey-300);
+			top: 0;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			div {
+				width: 70%;
+				top: 5em;
+				position: relative;
+			}
+
+			&::after {
+				content: "";
+				background: var(--grey-300);
+				height: 100vh;
+				width: 50vw;
+				position: absolute;
+				z-index: -1;
+			}
+		}
+
+		.upload-scan {
+			position: relative;
+			display: block;
+			overflow: unset;
+			line-height: 1.1em;
+			height: max-content;
+			pointer-events: none !important;
+
+		}
+
+	}
+}

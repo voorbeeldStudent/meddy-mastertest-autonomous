@@ -1,0 +1,50 @@
+@media all and (min-width: 1024px) and (max-width: 1280px) { }
+
+@media (min-width: 768px) { 
+    nav{
+        display:none;
+    }
+    header {
+        color: var(--grey-700);
+        background: var(--grey-200);
+        padding: 1.2em;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    header.upload-header, .upload-image, .upload-scan{
+        width: 22em;
+        display: block;
+    }
+    .intro {
+        position: relative;
+        top: 3em;
+        width: 24em;
+    }
+    .desktop-nav {
+        position: absolute;
+        width: 100%;
+        background: white;
+        top: 0;
+        left: 0;
+        box-shadow: 1px 4px 4px 0px var(--grey-500);
+    }
+    .desktop-nav img.meddy-logo{
+        padding:1em;
+        width:7em;
+    }
+    .results-scan article {
+        font-size: 0.9em;
+    }
+    .container {
+        display: flex;
+    }
+    .intro-img{
+        display: block;
+    }
+    
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+
+ }

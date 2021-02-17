@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --grey-000: #ffffff;
+    --grey-100: #F7FAFC;
+    --grey-200: #EDF2F7;
+    --grey-300: #E2E8F0;
+    --grey-400: #CBD5E0;
+    --grey-500: #A0AEC0;
+    --grey-600: #718096;
+    --grey-700: #4A5568;
+    --grey-800: #2D3748;
+    --grey-900: #1A202C;
+
+    --berry-100: #FDEDF1;
+    --berry-200: #FBD1DB;
+    --berry-300: #F9B5C5;
+    --berry-400: #F47E9A;
+    --berry-500: #EF476F;
+    --berry-600: #D74064;
+    --berry-700: #8F2B43;
+    --berry-800: #6C2032;
+    --berry-900: #481521;
+
+    --teal-100: #EAF5F4;
+    --teal-200: #CAE7E3;
+    --teal-300: #AAD8D2;
+    --teal-400: #6ABAB1;
+    --teal-500: #2A9D8F;
+    --teal-600: #268D81;
+    --teal-700: #195E56;
+    --teal-800: #134740;
+    --teal-900: #0D2F2B;
+    --teal-gradient: linear-gradient(124deg, rgba(42, 157, 143, 1) 43%, rgba(25, 94, 86, 1) 100%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--grey-200);
+}
+
+nav {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(--teal-400);
+    color: var(--grey-900);
+    z-index: 99;
+    position: sticky;
+    top: 0;
+    transition:400ms ease-in-out;
+    padding: 0.4em;
+}
+nav.changeBg{
+    /* transition:400ms ease-in-out; */
+    background: var(--teal-500);
+}
+
+.back {
+    position: absolute;
+    left: 1em;
+}
+
+.back a {
+
+    text-decoration: none;
+    color: var(--teal-700);
+    opacity: .8;
+
+}
+
+.top-nav {
+    width: 100%;
+    transition:400ms ease-in-out;
+}
+
+.top-nav img {
+    width: 3em;
+    padding: 0.7em;
+    opacity: 0;
+    transition:400ms ease-in-out;
+}
+img.scale-img{
+    padding: 0.4em;
+    opacity: .8;
+}
+
+.top-nav h1 {
+
+    font-size: 1.3em;
+
+}
+.intro-img{
+    display: none;
+}
+
+header {
+    color: var(--grey-100);
+    background: var(--teal-400);
+    padding: 1.2em;
+}
+
+header h2 {
+    font-size: 1em;
+}
+
+header p {
+    font-size: .8em;
+}
+
+header img.meddy-logo {
+    width: 30vw;
+    opacity: .5;
+}
+
+header.upload-header {
+    background: none;
+    color: var(--teal-700);
+
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1.4em;
+    margin-bottom: 3em;
+}
+
+.button-container a {
+    width: 6em;
+    height: 3em;
+    margin-bottom: .3em;
+}
+
+.button-container a:hover {
+    cursor: pointer;
+
+}
+
+.button-container a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: var(--teal-600);
+    background: var(--grey-000);
+    text-align: center;
+    border-radius: 0.3em;
+    padding: 0.6em;
+    width: 11em;
+}
+
+.button-container a:nth-of-type(1) {
+    animation: jump 10s ease-in-out infinite;
+}
+
+.button-container a:nth-of-type(2) {
+    background: var(--teal-600);
+    color: var(--grey-100);
+}
+
+.button-container a:nth-of-type(1) {
+    margin-bottom: 1em;
+}
+
+main {
+
+    margin: auto;
+    width: 100%;
+    display: block;
+    position: relative;
+
+}
+
+.no-history img {
+    width: 17em;
+}
+
+.no-history {
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    justify-content: center;
+    background: var(--grey-200);
+    top: -2em;
+    border-radius: 1em 1em 0 0;
+}
+
+.scan-history {
+    background: var(--grey-200);
+    padding: 1em;
+    border-radius: 1em 1em 0 0;
+    position: relative;
+    top: -2em;
+    width: 100vw;
+}
+
+.scan-history h3 {
+    padding: .5em;
+}
+
+.scan-history h2,
+.no-history h2 {
+    font-size: .8em;
+    color: var(--grey-700);
+    width: 100%;
+}
+
+.scan-history article {
+    background: var(--grey-000);
+    border-radius: 0.3em;
+    box-shadow: 1px 4px 4px 0px var(--grey-400);
+}
+
+.scan-history article a {
+    text-decoration: none;
+    font-size: 0.7em;
+    color: var(--grey-800);
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+label {
+
+    width: 70%;
+    padding: 0.7em;
+    background: var(--teal-gradient);
+    border: none;
+    margin-top: 1em;
+    font-size: 0.9em;
+    border-radius: 0.2em;
+    display: block;
+    text-align: center;
+    color: white;
+    margin: auto;
+    opacity: 1;
+    transition: 600ms ease-in-out;
+}
+
+label:hover {
+    cursor: pointer;
+    width: 78%;
+}
+
+.imageplaceholder {
+    color: var(--grey-700);
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+}
+
+.imageplaceholder span {
+    font-weight: 800;
+}
+
+.imageplaceholder h3 {
+    color: var(--grey-900);
+}
+
+img.place-holder {
+    width: 100%;
+    opacity: .3;
+    margin: 0 0 .1rem;
+}
+
+img.show-image {
+
+    opacity: 1;
+    width: 100%;
+    /* height: 100%; */
+    object-fit: contain;
+    /* padding: 1em; */
+
+}
+
+.upload-container {
+    width: 30em;
+    /* background: var(--grey-100); */
+    height: 30em;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    /* border: 0.1em dashed var(--grey-600); */
+    margin: 1em auto;
+}
+
+.place-holder {
+    position: relative;
+    display: block;
+}
+
+.place-holder.container {
+    height: 27em;
+    background: var(--grey-100);
+    position: relative;
+    display: block;
+    border-radius: 1em;
+}
+
+.imageplaceholder article {
+    text-align: center;
+    width: 14em;
+    margin: auto;
+
+}
+
+.upload {
+    width: 100%;
+    padding: 0.7em;
+    background: teal;
+    border: none;
+    margin-top: 1em;
+    font-size: 1em;
+    color: white;
+}
+
+.upload-image {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    justify-content: center;
+    background: var(--grey-300);
+    margin: 1em;
+    border: .09em dashed var(--grey-500);
+}
+
+.upload-image img {
+    display: inline-block;
+    width: 100%;
+    /* margin:1em; */
+}
+
+.upload-image div {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.upload-image p {
+    font-size: 0.7em;
+    color: var(--grey-600);
+    width: 14em;
+    margin: 1em auto;
+}
+
+form {
+    width: 15em;
+}
+
+.upload-scan {
+    width: 100%;
+    background: var(--grey-200);
+    padding: 1em;
+    border-radius: 1em;
+    position: relative;
+    color: rgb(20, 20, 20);
+    /* height:30em; */
+    margin: auto;
+}
+
+.upload-scan p {
+    font-size: .8em;
+    font-family: Tahoma;
+}
+
+.upload-scan p {
+    font-size: .8em;
+    font-family: Tahoma;
+    padding: 1em;
+    background: var(--teal-200);
+    border: dashed .1em var(--teal-400);
+    top: -1em;
+    position: relative;
+}
+
+.results-scan {
+    text-align: left;
+    /* background: var(--grey-000); */
+    padding: 1em;
+    border-radius: 0.3em;
+}
+
+.results-scan article {
+    background: var(--grey-000);
+    box-shadow: 1px 4px 4px 0px var(--grey-400);
+}
+
+.results-scan h3 {
+    padding: 0;
+    font-size: 1em;
+}
+
+.results-scan span {
+    color: var(--grey-600);
+    font-size: 0.8em;
+}
+
+
+
+/* loading animation */
+
+div.loading-state {
+    padding: 1em;
+    text-align: center;
+}
+
+div.loading-state {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--grey-300);
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+div.loading-state div div.scan-line {
+    width: 10em;
+    background: var(--grey-600);
+    height: .15em;
+    margin: auto;
+    animation: scan-line-animation 2s ease-in-out infinite;
+}
+
+div.loading-state div span {
+    color: var(--grey-500);
+    font-size: 2em;
+    font-weight: 900
+}
+
+.loading-state.hidden {
+    animation: fadeOut 1s reverse;
+    animation-fill-mode: forwards;
+}
+
+.loading-state.show {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+.med-detail {
+    padding: 1em;
+}
+
+.med-detail span {
+    color: var(--grey-600);
+    font-size: 0.8em;
+    font-family: "Avenir";
+    position: relative;
+    top: 1em;
+}
+
+/* search page */
+
+#medicine {
+    width: 100%;
+    border: none;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.search-form {
+    width: 100%;
+    background: var(--teal-400);
+    padding: 1em;
+    position: sticky;
+    top: 3em;
+    margin-top: -1.2em;
+}
+.search-form input{
+    text-align: center;
+}
+.search-form button{
+    display:none;
+}
+.search-list article {
+    background: white;
+    padding: 0.8em;
+    margin: 1em;
+    border-radius: 0.4em;
+    box-shadow: 1px 4px 4px 0px var(--grey-400);
+}
+
+.search-list h2 {
+    font-size: 1em;
+}
+
+.search-list article a {
+    text-decoration: none;
+    color: var(--teal-800);
+}
+
+/* detail page */
+
+a.back-arrow {
+    padding: 1em;
+    display: flex;
+}
+svg path {
+    fill: var(--grey-600);
+}
+
+
+@keyframes scan-line-animation {
+    0% {
+        display: block;
+        position: relative;
+        top: 0em;
+    }
+
+    50% {
+        display: block;
+        position: relative;
+        top: -2em;
+    }
+
+    100% {
+        display: block;
+        position: relative;
+        top: 0em;
+    }
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0em)
+    }
+
+    8% {
+        transform: translateY(0em)
+    }
+
+    10% {
+        transform: translateY(-.3em)
+    }
+
+    13% {
+        transform: translateY(.0em)
+    }
+
+    15% {
+        transform: translateY(-.4em)
+    }
+
+    18% {
+        transform: translateY(0em)
+    }
+
+    100% {
+        transform: translateY(0em)
+    }
+}
+
+
+@media all and (min-width: 1024px) and (max-width: 1280px) { }
+
+@media (min-width: 768px) { 
+    nav{
+        display:none;
+    }
+    header {
+        color: var(--grey-700);
+        background: var(--grey-200);
+        padding: 1.2em;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    header.upload-header, .upload-image, .upload-scan{
+        width: 22em;
+        display: block;
+    }
+    .intro {
+        position: relative;
+        top: 3em;
+        width: 24em;
+    }
+    .desktop-nav {
+        position: absolute;
+        width: 100%;
+        background: white;
+        top: 0;
+        left: 0;
+        box-shadow: 1px 4px 4px 0px var(--grey-500);
+    }
+    .desktop-nav img.meddy-logo{
+        padding:1em;
+        width:7em;
+    }
+    .results-scan article {
+        font-size: 0.9em;
+    }
+    .container {
+        display: flex;
+    }
+    .intro-img{
+        display: block;
+    }
+    
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+
+ }

@@ -1,0 +1,26 @@
+.med-detail {
+	padding: 1em;
+
+	span {
+		color: var(--grey-600);
+		font-size: 0.8em;
+		font-family: "Avenir";
+		position: relative;
+		top: 1em;
+	}
+}
+
+#medicine {
+	width: 100%;
+	border: none;
+	padding: 1em;
+	border-radius: 1em;
+}
+
+@media (min-width: 768px) {
+	.med-detail {
+		padding: 1em;
+		width: 20em;
+		margin: auto;
+	}
+}
