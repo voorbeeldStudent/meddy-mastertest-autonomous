@@ -1,0 +1,47 @@
+{
+  "name": "meesterproef-1920",
+  "version": "1.0.0",
+  "description": "medicine scanner ",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js & node-sass --include-path scss src/scss/main.scss public/css/main.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joanpadolina/meesterproef-1920.git"
+  },
+  "keywords": [
+    "medicine",
+    "scanner",
+    "machine",
+    "learning",
+    "algorithms"
+  ],
+  "author": "Joan Padolina & Lien Vo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joanpadolina/meesterproef-1920/issues"
+  },
+  "homepage": "https://github.com/joanpadolina/meesterproef-1920#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "fuzzy-search": "^3.2.1",
+    "multer": "^1.4.2",
+    "node-fetch": "^2.6.0",
+    "node-sass": "^4.14.1",
+    "node-tesseract-ocr": "^1.0.0",
+    "nodemon": "^2.0.3",
+    "string-similarity": "^4.0.1",
+    "tesseract.js": "^2.1.1"
+  },
+  "devDependencies": {
+    "string-similarity": "^4.0.1"
+  }
+}
